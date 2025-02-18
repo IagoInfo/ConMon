@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor Monetário</title>
+    <style>
+        body {
+            background-color: #000080;
+            color: #FFFFFF;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 2.5em;
+            margin-top: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 30px;
+        }
+        input[type="number"], select {
+            width: 100%;
+        }
+        input[type="button"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #FF4500;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor Monetário</h1>
+    <form>
+        <label for="amount">Valor:</label>
+        <input type="number" id="amount" name="amount"><br><br>
+        <label for="fromCurrency">De:</label>
+        <select id="fromCurrency" name="fromCurrency">
+            <option value="BRL">BRL - Real</option>
+            <option value="USD">USD - Dólar</option>
+            <option value="EUR">EUR - Euro</option>
+        </select><br><br>
+        <label for="toCurrency">Para:</label>
+        <select id="toCurrency" name="toCurrency">
+            <option value="BRL">BRL - Real</option>
+            <option value="USD">USD - Dólar</option>
+            <option value="EUR">EUR - Euro</option>
+        </select><br><br>
+        <input type="button" value="Converter" onclick="convertCurrency()">
+    </form>
+    <p id="result"></p>
+</body>
+</html>
